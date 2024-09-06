@@ -52,7 +52,7 @@ td[contenteditable="true"]:focus {
     background-color: #e0e0e0;
 }
 /* Estilo para columnas con ancho fijo */
-.fixed-width {
+.prueba {
     width: 100px; /* Ajusta el ancho según tus necesidades */
     white-space: nowrap; /* Evita el ajuste de texto en múltiples líneas */
     overflow: hidden; /* Oculta el contenido que se desborde */
