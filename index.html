@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Registro de Entrenamiento</h1>
         
-        <section class="day">
+        <section class="day" id="day1">
             <h2>Día 1 - Empuje + Isquios</h2>
             <table>
                 <thead>
@@ -76,7 +76,7 @@
             </table>
         </section>
         
-        <section class="day">
+        <section class="day" id="day2">
             <h2>Día 2 - Tracción + Cuadriceps</h2>
             <table>
                 <thead>
@@ -142,7 +142,7 @@
             </table>
         </section>
 
-        <section class="day">
+        <section class="day" id="day3">
             <h2>Día 3 - Empuje + Isquios</h2>
             <table>
                 <thead>
@@ -208,7 +208,7 @@
             </table>
         </section>
         
-        <section class="day">
+        <section class="day" id="day4">
             <h2>Día 4 - Tracción + Cuadriceps</h2>
             <table>
                 <thead>
@@ -283,5 +283,45 @@
         </section>
         <!-- Repite para los demás días según sea necesario -->
     </div>
+
+    <script>
+        // Función para guardar los datos en el Local Storage
+        function saveData() {
+            const day1Table = document.querySelector('#day1 table').outerHTML;
+            const day2Table = document.querySelector('#day2 table').outerHTML;
+            const day3Table = document.querySelector('#day3 table').outerHTML;
+            const day4Table = document.querySelector('#day4 table').outerHTML;
+            localStorage.setItem('day1Table', day1Table);
+            localStorage.setItem('day2Table', day2Table);
+            localStorage.setItem('day3Table', day3Table);
+            localStorage.setItem('day4Table', day4Table);
+        }
+
+        // Función para cargar los datos desde el Local Storage
+        function loadData() {
+            const day1Table = localStorage.getItem('day1Table');
+            const day2Table = localStorage.getItem('day2Table');
+            const day3Table = localStorage.getItem('day3Table');
+            const day4Table = localStorage.getItem('day4Table');
+            if (day1Table) {
+                document.querySelector('#day1').innerHTML = day1Table;
+            }
+            if (day2Table) {
+                document.querySelector('#day2').innerHTML = day2Table;
+            }
+            if (day3Table) {
+                document.querySelector('#day3').innerHTML = day3Table;
+            }
+            if (day4Table) {
+                document.querySelector('#day4').innerHTML = day4Table;
+            }
+        }
+
+        // Cargar datos cuando la página se carga
+        document.addEventListener('DOMContentLoaded', loadData);
+
+        // Guardar datos cuando la página se cierra o recarga
+        window.addEventListener('beforeunload', saveData);
+    </script>
 </body>
 </html>
