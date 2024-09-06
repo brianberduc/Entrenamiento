@@ -53,7 +53,7 @@ td[contenteditable="true"]:focus {
 }
 /* Estilo para columnas con ancho fijo */
 .prueba {
-    width: 100px; /* Ajusta el ancho según tus necesidades */
+    width: 1000px; /* Ajusta el ancho según tus necesidades */
     white-space: nowrap; /* Evita el ajuste de texto en múltiples líneas */
     overflow: hidden; /* Oculta el contenido que se desborde */
     text-overflow: ellipsis; /* Muestra puntos suspensivos si el contenido es demasiado largo */
