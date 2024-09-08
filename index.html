@@ -327,30 +327,30 @@
         // Guardar datos cuando la página se cierra o recarga
         window.addEventListener('beforeunload', saveData);
 
-        document.querySelector("#day1button").addEventListener("click", () => {
+        // document.querySelector("#day1button").addEventListener("click", () => {
 
-            const tr = document.createElement("tr");
-            const tds = [1,2,3,4, 5, 6].map(m => {
-            const td =  document.createElement("td");
+        //     const tr = document.createElement("tr");
+        //     const tds = [1,2,3,4, 5, 6].map(m => {
+        //     const td =  document.createElement("td");
 
-              td.setAttribute("contenteditable", true);
-                return td;
-            })
+        //       td.setAttribute("contenteditable", true);
+        //         return td;
+        //     })
 
-            for(const td of tds) {
-                tr.appendChild(td)
-            }
-            document.querySelector('#day1 table tbody').appendChild(tr);
-        })
+        //     for(const td of tds) {
+        //         tr.appendChild(td)
+        //     }
+        //     document.querySelector('#day1 table tbody').appendChild(tr);
+        // })
 
-        document.querySelector("#day1buttonRemove").addEventListener("click", () => {
+//         document.querySelector("#day1buttonRemove").addEventListener("click", () => {
 
-            const childrens = document.querySelector("#day1 table tbody").children;
+//             const childrens = document.querySelector("#day1 table tbody").children;
 
-        const tr = childrens.item(childrens.length - 1)
+//         const tr = childrens.item(childrens.length - 1)
 
-        document.querySelector('#day1 table tbody').removeChild(tr)
-})
+//         document.querySelector('#day1 table tbody').removeChild(tr)
+// })
         
     </script>
 </body>
